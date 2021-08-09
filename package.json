@@ -4,11 +4,22 @@
   "description": "Programación Web 2: API Example",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
+    "server": "pm2 start server.js -i max --watch",
+    "server:logs": "pm2 logs server",
+    "server:stop": "pm2 stop server",
+    "server:delete": "pm2 delete server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "IUPA",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
